@@ -1,0 +1,25 @@
+3
+200
+8
+4
+1000
+250
+100
+1000
+1
+25
+6000
+10
+
+# threads
+# minimum thinking time
+# level
+# min depth
+# hash size
+# contempt
+# slow mover
+# time constraint
+# time delays on 0 = false, 1 = true
+# time delay for opening
+# time delay for midgame
+# time delay for endgame
