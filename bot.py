@@ -1,4 +1,5 @@
 import os
+import platform
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium import webdriver
 from time import sleep
@@ -29,6 +30,9 @@ settings.close()
 curdir = os.getcwd()
 driverdir = curdir + '/chromedriver'
 enginedir = curdir + '/stockfish'
+#check if the system is a mac, then use the brew package
+if platform.system() == 'Darwin':
+    enginedir = '/usr/local/Cellar/stockfish/14/bin/stockfish'
 
 stockfish = Stockfish(enginedir, parameters={"Threads": thr, "Minimum Thinking Time": mintime, "Skill Level": level, "Min Split Depth": mindep, "Hash": hashsize, "Contempt": con, "Slow Mover": slow})
 
@@ -126,11 +130,11 @@ while (cont != 'q'):
         html = bot.page_source
         try:
             nextb.click()
-            sleep(.1)
+            sleep(1)
             nextb.click()
         except StaleElementReferenceException:
             break
         except StaleElementException:
             break       
-        sleep(5)
+        sleep(3)
 bot.quit()
