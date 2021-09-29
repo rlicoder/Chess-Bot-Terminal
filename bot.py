@@ -124,17 +124,24 @@ while (cont != 'q'):
     except NoSuchElementException:
         nextb = bot.find_element_by_xpath('/html/body/div[3]/div/div[2]/div/div[5]/div[1]/button[2]')
     html = bot.page_source
+    print("i will click next game now")
+    sleep(2)
     nextb.click()
-    sleep(3)
+    print("done")
+    sleep(2)
     while (html.find('Draw') == -1):
+        if random.randint(0,100) < 15:
+            try:
+                print("requeueing")
+                nextb.click()
+                sleep(1)
+                nextb.click()
+                print("done")
+            except StaleElementReferenceException:
+                break
+            except StaleElementException:
+                break       
+        else:
+            sleep(5)
         html = bot.page_source
-        try:
-            nextb.click()
-            sleep(1)
-            nextb.click()
-        except StaleElementReferenceException:
-            break
-        except StaleElementException:
-            break       
-        sleep(3)
 bot.quit()
