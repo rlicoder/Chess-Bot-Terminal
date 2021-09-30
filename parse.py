@@ -37,10 +37,10 @@ def getFen(html):
         res = match.group();
         res = res.replace("square-", "")
         pieces.append(res)
-    f = open("pieces.txt", "a")
-    for piece in pieces:
-        f.write(piece)
-    f.write('\n')
+    #f = open("pieces.txt", "a")
+    #for piece in pieces:
+        #f.write(piece)
+    #f.write('\n')
 
     rows, cols = (8, 8)
     board=[]
