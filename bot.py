@@ -1,6 +1,6 @@
 import os
 import platform
-from webdriver_manager.chrome import ChromeDriverManager
+from webdriver_manager.firefox import GeckoDriverManager
 from selenium import webdriver
 from time import sleep
 from stockfish import Stockfish
@@ -28,11 +28,14 @@ end_delay = int(settings.readline())
 settings.close()
 
 curdir = os.getcwd()
-driverdir = curdir + '/chromedriver'
-enginedir = curdir + '/stockfish'
+#driverdir = curdir + '/chromedriver'
 #check if the system is a mac, then use the brew package
 if platform.system() == 'Darwin':
     enginedir = '/usr/local/Cellar/stockfish/14/bin/stockfish'
+elif platform.system() == 'Windows':
+    enginedir = curdir + '/windows_stockfish'
+else:
+    enginedir = curdir + '/stockfish'
 
 stockfish = Stockfish(enginedir, parameters={"Threads": thr, "Minimum Thinking Time": mintime, "Skill Level": level, "Min Split Depth": mindep, "Hash": hashsize, "Contempt": con, "Slow Mover": slow})
 
@@ -41,7 +44,7 @@ ops.add_argument('--user-agent=nigerundayo')
 ops.add_experimental_option("excludeSwitches", ["enable-automation"])
 ops.add_experimental_option('useAutomationExtension', False)
 ops.add_argument("--disable-blink-features=AutomationControlled")
-bot = webdriver.Chrome(ChromeDriverManager().install(), options=ops)
+bot = webdriver.Firefox(GeckoDriverManager().install(), options=ops)
 bot.set_page_load_timeout(20)
 
 bot.get('https://www.chess.com/home')
