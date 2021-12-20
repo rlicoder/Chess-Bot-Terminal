@@ -1,5 +1,38 @@
 import re
+from selenium.webdriver.common.by import By
 
+def getTurnNumber(html):
+    pat = re.findall('data-whole-move-number="\d*?"(?!.*data-whole-move-number)', html)
+    if len(pat) == 0:
+        turnnum = 0
+    else:
+        pat[0] = pat[0].replace('data-whole-move-number="', '')
+        pat[0] = pat[0].replace('"', '')
+        turnnum = int(pat[0])
+
+    return turnnum;
+    
+def getTurn(html):
+    whiteturn = True
+    #live
+    if html.find('clock-player-turn') != -1:
+            loc = html.find('clock-player-turn')
+            turn = html[loc-80:loc-47]
+            if turn.find('white') != -1:
+                whiteturn = True
+            else:
+                whiteturn = False
+    #puzzle
+    elif html.find('to Move') != -1:
+        if (html.find('Black to Move')) != -1:
+            whiteturn = False
+        else:
+            whiteturn = True
+    else:
+        print("ERROR IN GETTING TURN, MAKE SURE YOU ARE IN LIVE OR PUZZLE")
+    
+    return whiteturn
+            
 def getFen(html):
     #f = open("html.txt", "w")
     #f.write(html)
@@ -104,7 +137,7 @@ def getFen(html):
     if cast == False:
         FEN += " - "
     FEN += " - 0 0"
-    print(FEN)
+    #print(FEN)
     return FEN
 
 def getDir(html):
@@ -120,3 +153,23 @@ def getDir(html):
         dir_x = -1 * width / 8
         dir_y = width / 8
     return dir_x, dir_y
+
+def makeMove(move, bot):
+    #moves are encoded as "e2e4"
+    posx = int(move[1])
+    posy = int(ord(move[0]) - 96)
+    #conversion to x-y encoding
+    search = "square-"
+    search += str(posy)
+    search += str(posx)
+    piecel = bot.find_elements(By.CLASS_NAME, search);
+    #don't remember why this was added? promotion stuff? highlighting?
+    if len(piecel) == 2:
+        piece = piecel[1]
+    else:
+        piece = piecel[0]
+    endx = int(move[3])
+    endy = int(ord(move[2]) - 96)
+    difx = endx - posx
+    dify = endy - posy
+    return piece, difx, dify

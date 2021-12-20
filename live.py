@@ -1,15 +1,16 @@
 import os
 import platform
-from webdriver_manager.firefox import GeckoDriverManager
+from webdriver_manager.chrome import ChromeDriverManager
 from selenium import webdriver
 from time import sleep
 from stockfish import Stockfish
-import parse
 import util
 import random
 from selenium.common.exceptions import NoSuchElementException
 from selenium.common.exceptions import StaleElementReferenceException
 from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.firefox.service import Service
+from selenium.webdriver.common.by import By
 
 
 settings = open("settings.txt", "r")
@@ -44,19 +45,21 @@ ops.add_argument('--user-agent=nigerundayo')
 ops.add_experimental_option("excludeSwitches", ["enable-automation"])
 ops.add_experimental_option('useAutomationExtension', False)
 ops.add_argument("--disable-blink-features=AutomationControlled")
-bot = webdriver.Firefox(GeckoDriverManager().install(), options=ops)
+
+bot = webdriver.Chrome(ChromeDriverManager().install(), options = ops)
 bot.set_page_load_timeout(20)
 
 bot.get('https://www.chess.com/home')
-email = bot.find_element_by_xpath('//*[@id="username"]')
+email = bot.find_element(By.XPATH, '//*[@id="username"]')
 email.send_keys('MiniMaxer')
-passw = bot.find_element_by_xpath('//*[@id="password"]')
+passw = bot.find_element(By.XPATH, '//*[@id="password"]')
 passw.send_keys('HPziac9W4JRiwkE')
-signin = bot.find_element_by_xpath('//*[@id="login"]')
+signin = bot.find_element(By.XPATH, '//*[@id="login"]')
 signin.click()
 
 time = input("time control?")
 cont = "New " + time + " min"
+print(cont)
 
 while (cont != 'q'):
     html = bot.page_source
@@ -96,8 +99,8 @@ while (cont != 'q'):
                 stockfish.set_depth(18)
             sleep(offset/1000)
         html = bot.page_source
-        FEN = parse.getFen(html)
-        dir_x, dir_y = parse.getDir(html)
+        FEN = util.getFen(html)
+        dir_x, dir_y = util.getDir(html)
 
         stockfish.set_fen_position(FEN)
         move = stockfish.get_best_move_time(timecons)
@@ -105,27 +108,16 @@ while (cont != 'q'):
         print(move)
         print(stockfish.get_evaluation())
 
-        posx = int(move[1])
-        posy = int(ord(move[0]) - 96)
-        search = "square-"
-        search += str(posy)
-        search += str(posx)
-        piecel = bot.find_elements_by_class_name(search);
-        if len(piecel) == 2:
-            piece = piecel[1]
-        else:
-            piece = piecel[0]
-        endx = int(move[3])
-        endy = int(ord(move[2]) - 96)
-        difx = endx - posx
-        dify = endy - posy
+        piece, difx, dify = util.makeMove(move, bot)
         webdriver.ActionChains(bot).drag_and_drop_by_offset(piece, dify * dir_y, difx * dir_x).perform()
         html = bot.page_source
     sleep(random.randint(0,500)/1000)
     try:
-        nextb = bot.find_element_by_xpath('/html/body/div[3]/div/div[2]/div/div[4]/div[1]/button[2]')
+        #New x min
+        nextb = bot.find_element(By.XPATH, '/html/body/div[3]/div/div[2]/div[2]/div[1]/button[1]')
     except NoSuchElementException:
-        nextb = bot.find_element_by_xpath('/html/body/div[3]/div/div[2]/div/div[5]/div[1]/button[2]')
+        #Rematch 
+        nextb = bot.find_element(By.XPATH, '/html/body/div[3]/div/div[2]/div[2]/div[1]/button[2]')
     html = bot.page_source
     print("i will click next game now")
     sleep(2)
