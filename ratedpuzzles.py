@@ -23,7 +23,7 @@ elif platform.system() == 'Windows':
 else:
     enginedir = curdir + '/stockfish'
 
-stockfish = Stockfish(enginedir, parameters={"Threads": 6, "Minimum Thinking Time": 1000, "Skill Level": 20, "Min Split Depth": 10, "Hash": 256})
+stockfish = Stockfish(enginedir, parameters={"Threads": 2, "Minimum Thinking Time": 1000, "Skill Level": 20, "Min Split Depth": 10, "Hash": 256})
 
 ops = Options()
 ops.add_argument('--user-agent=nigerundayo')
@@ -63,7 +63,8 @@ while (cont != 'q'):
         stockfish.set_fen_position(FEN)
         move = stockfish.get_best_move_time(1000)
         
-        #print(move)
+        print(FEN)
+        print(move)
 
         piece, difx, dify = chessUtil.makeMove(move, bot)
         webdriver.ActionChains(bot).drag_and_drop_by_offset(piece, dify * dir_y, difx * dir_x).perform()
@@ -93,8 +94,7 @@ while (cont != 'q'):
             nextb.click()
             print("Passed: ", good, "  Failed: ", bad)
             print("Average time per puzzle: ", totaltime / (good + bad))
-
-            sleep(1)
+            sleep(2)
         except NoSuchElementException:
             continue
 bot.quit()
