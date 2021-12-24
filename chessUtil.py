@@ -114,7 +114,8 @@ def getFen(html):
                 FEN += (board[i][j])
         if count > 0:
             FEN += (str(count))
-        FEN += ('/')
+        if (i != 0):
+            FEN += ('/')
 
     if whiteturn == True:
         FEN += " w"
@@ -173,3 +174,30 @@ def makeMove(move, bot):
     difx = endx - posx
     dify = endy - posy
     return piece, difx, dify
+
+
+def findInBetween(start, end, turn):
+    #finds the move that gets you from the starting FEN to the ending FEN
+    from Chessnut import Game
+    l = start.split(' ')
+    l[1] = turn
+    start = ' '.join(l)
+    startgame = Game(start)
+    for i in startgame.get_moves():
+        dummy = Game(start)
+        dummy.apply_move(i)
+        dummyend = dummy.get_fen()
+        if (dummyend.split(' ')[0] == end.split(' ')[0]):
+            return i
+    return None
+
+
+
+
+
+
+
+    
+
+
+    
