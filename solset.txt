@@ -15097,6 +15097,528 @@
         {
             "FEN": "6r1/2p4k/4p3/p5r1/Pqp1P3/4QRP1/6P1/3R2K1 w  -  - 0 0",
             "sol": []
+        },
+        {
+            "FEN": "2kr4/ppp2p2/7r/3Bp1q1/6n1/2NP1Q2/PP2K3/R5R1 b  -  - 0 0",
+            "sol": []
+        },
+        {
+            "FEN": "4kr2/2p1n2p/r2bQ1p1/3P4/1pq5/P3B2P/1PN2NP1/2KR1R2 b  -  - 0 0",
+            "sol": [
+                "b4a3",
+                "c4c3",
+                "a3a2",
+                "e7c8",
+                "c3e5",
+                "d6e5"
+            ]
+        },
+        {
+            "FEN": "4kb1r/Q3pppp/5nn1/8/5B2/2Pq3P/RP4P1/4K1NR b Kk - 0 0",
+            "sol": [
+                "d3b1",
+                "f6e4",
+                "b1e1",
+                "e1d2",
+                "d2e2",
+                "e7e5",
+                "e2d2",
+                "g6e5",
+                "d2d5",
+                "d5g2"
+            ]
+        },
+        {
+            "FEN": "r2r4/5Bpk/1Rp1P2p/5p2/8/8/p4PPP/R5K1 b  -  - 0 0",
+            "sol": [
+                "d8b8",
+                "a8b8",
+                "b8b1",
+                "b1a1",
+                "a1e1",
+                "e1e8"
+            ]
+        },
+        {
+            "FEN": "1k1n1r2/p1rR4/Pp1Qp3/1Pp1p2p/2P1q1p1/1K2B1P1/5P2/1R6 b  -  - 0 0",
+            "sol": [
+                "e4b1",
+                "b1b4",
+                "e5e4",
+                "b4c4",
+                "c4b4",
+                "b4b5"
+            ]
+        },
+        {
+            "FEN": "6R1/8/8/8/4kp2/8/2r4p/7K b  -  - 0 0",
+            "sol": [
+                "c2c1",
+                "f4f3",
+                "e4f4",
+                "f3f2",
+                "f4e3",
+                "c1g1"
+            ]
+        },
+        {
+            "FEN": "2kr3r/bp1q3p/p1p1pnp1/P3Q3/1P1pP3/2PP1N2/5PPP/RN1K3R b  -  - 0 0",
+            "sol": [
+                "f6g4",
+                "d4c3",
+                "d7d3",
+                "a7f2",
+                "d8d7",
+                "f2e3"
+            ]
+        },
+        {
+            "FEN": "r1b1r1k1/p4p1p/2N2q1B/1pb2p1Q/3p4/3P4/PPPK1PPP/R3R3 b  -  - 0 0",
+            "sol": [
+                "c8b7",
+                "c5f8",
+                "g8f8",
+                "a8e8",
+                "f6d6",
+                "d6b4"
+            ]
+        },
+        {
+            "FEN": "8/7p/8/6k1/6p1/8/6KP/8 b  -  - 0 0",
+            "sol": [
+                "g5h4",
+                "h4h3",
+                "h7h6",
+                "h6h5",
+                "h5h4",
+                "g4g3",
+                "h4g3",
+                "g3g2",
+                "h3h2"
+            ]
+        },
+        {
+            "FEN": "r4qk1/2p3p1/p3p2p/1pPnP1p1/3P2Pb/BP1QP3/P3B2P/R5K1 b  -  - 0 0",
+            "sol": [
+                "f8f2",
+                "d5e3",
+                "a8f8",
+                "f8f3",
+                "e3g4",
+                "f3f8",
+                "f2f8"
+            ]
+        },
+        {
+            "FEN": "8/5K1p/k1p3p1/2P3P1/N7/1p6/8/8 b  -  - 0 0",
+            "sol": [
+                "a6b5",
+                "b5c5",
+                "c5d4",
+                "c6c5",
+                "c5c4",
+                "c4c3",
+                "c3b2"
+            ]
+        },
+        {
+            "FEN": "r3r1k1/7p/p2p1QpB/1p1P4/1q2p3/3p3P/5PP1/3R2K1 b  -  - 0 0",
+            "sol": [
+                "a8a7",
+                "a7e7",
+                "e8c8",
+                "b4c3"
+            ]
+        },
+        {
+            "FEN": "r1b2k2/pp3ppp/2p5/q1n1n3/P3P1P1/NBP5/4NK1P/R2Q3R b  -  - 0 0",
+            "sol": [
+                "c5e4",
+                "c8g4",
+                "a8d8",
+                "d8d2",
+                "d2e2",
+                "g4e2"
+            ]
+        },
+        {
+            "FEN": "Q4qk1/1p5p/6p1/1n2r3/2p1B3/2Pp3P/P4PP1/4R1K1 w  -  - 0 0",
+            "sol": [
+                "e4d5",
+                "e1e8",
+                "a8c8",
+                "c8e8"
+            ]
+        },
+        {
+            "FEN": "3r4/8/6K1/p4B2/7P/k7/8/8 b  -  - 0 0",
+            "sol": []
+        },
+        {
+            "FEN": "4rRK1/k1p4P/1p6/7n/1P6/8/P5P1/8 b  -  - 0 0",
+            "sol": [
+                "h5f6",
+                "e8f8",
+                "f6h7",
+                "c7c5",
+                "b6c5",
+                "c5c4",
+                "c4c3",
+                "c3c2"
+            ]
+        },
+        {
+            "FEN": "rnbq1rk1/ppp2pp1/7p/4P1nQ/2B5/5N2/P4PPP/R1B1K2R b KQ - 0 0",
+            "sol": [
+                "g5f3",
+                "d8d4",
+                "d4c3",
+                "c3c4"
+            ]
+        },
+        {
+            "FEN": "8/5pkp/5n2/4q1p1/P2p2P1/2P4P/3PPP2/R1BK3R b  -  - 0 0",
+            "sol": [
+                "d4c3",
+                "c3d2",
+                "e5d5",
+                "d5h1",
+                "h1b1",
+                "g7f6"
+            ]
+        },
+        {
+            "FEN": "8/8/4p3/2b3p1/4k3/6P1/5RKP/8 b  -  - 0 0",
+            "sol": [
+                "c5f2",
+                "g5g4",
+                "e6e5",
+                "g4h3",
+                "e4f3",
+                "f3g4"
+            ]
+        },
+        {
+            "FEN": "r5k1/ppN3pp/3p4/2p1p1q1/4P2b/6P1/PPP4K/R2Q1R2 b  -  - 0 0",
+            "sol": [
+                "h4g3",
+                "g5h4",
+                "h4h2",
+                "a8f8",
+                "f8f1",
+                "f1f7"
+            ]
+        },
+        {
+            "FEN": "kr1r4/1pQP3p/1p6/3BP3/5q1P/K2b4/P7/2R5 w  -  - 0 0",
+            "sol": []
+        },
+        {
+            "FEN": "3rk2r/1p2bppp/pn1N4/5P2/5Q2/8/PPq1B1PP/R2R2K1 b k - 0 0",
+            "sol": [
+                "e7d6",
+                "e8f8",
+                "c2b2",
+                "b6d5",
+                "d5e3",
+                "d8d6"
+            ]
+        },
+        {
+            "FEN": "1R6/2r1r2k/3q2pp/p3p3/Pn1PQ3/3B4/3P1P1P/4R1K1 w  -  - 0 0",
+            "sol": [
+                "d4e5",
+                "e4a8",
+                "b8h8",
+                "a8f8",
+                "f8e8",
+                "h8f8"
+            ]
+        },
+        {
+            "FEN": "1k1Bn3/5Rb1/b2pP1p1/p1pPp3/2P1P3/1qN1Q3/1P2B2r/2K5 b  -  - 0 0",
+            "sol": []
+        },
+        {
+            "FEN": "3rr1k1/1b1n1pp1/p6p/1p1N4/3R2B1/P7/1P3PPP/2R3K1 b  -  - 0 0",
+            "sol": [
+                "d7e5",
+                "g8f8",
+                "e8d8",
+                "e5g4",
+                "f8e7",
+                "d8d7",
+                "e7d7"
+            ]
+        },
+        {
+            "FEN": "rn1r2k1/pp3pP1/7p/2b5/P2pN3/1b1P3P/qP1BQP2/2KR2NR w  -  - 0 0",
+            "sol": [
+                "e4f6",
+                "f6h5",
+                "e2g4",
+                "d2h6",
+                "g4e4",
+                "h6g5"
+            ]
+        },
+        {
+            "FEN": "8/8/6p1/5p2/7K/4k2P/6P1/8 b  -  - 0 0",
+            "sol": []
+        },
+        {
+            "FEN": "N2k4/pp6/3p3r/3n3p/N2b4/7P/P1nRPP1P/5K1R b  -  - 0 0",
+            "sol": [
+                "d5e3",
+                "h6f6",
+                "c2e3",
+                "d4e5",
+                "f6f5",
+                "e5f6"
+            ]
+        },
+        {
+            "FEN": "2q1rk2/4r1pp/ppp2pbn/4n1P1/2P1PB2/1NP1QB2/P4P1P/3RR1K1 b  -  - 0 0",
+            "sol": [
+                "h6f5",
+                "f5h4",
+                "g6e4",
+                "e5f3",
+                "h4f3",
+                "e7e1",
+                "e8e1"
+            ]
+        },
+        {
+            "FEN": "r1b1k2r/3p1p1p/p7/2p5/P4NPn/q2P4/P1P4P/bQ1K3R w kq - 0 0",
+            "sol": [
+                "h1e1",
+                "e1e5",
+                "b1b6",
+                "b6b7",
+                "b7a8",
+                "f4h5",
+                "a8h8"
+            ]
+        },
+        {
+            "FEN": "2k5/ppp5/4q1p1/5rB1/1n1b4/3P2PQ/PPP2P1P/R3R1K1 b  -  - 0 0",
+            "sol": [
+                "d4f2",
+                "f2e1",
+                "c8d7",
+                "d7d6",
+                "e6e7",
+                "d6e7"
+            ]
+        },
+        {
+            "FEN": "rn1k3r/pR3ppp/3p4/2pq2N1/8/3B3P/2P2PP1/3R2K1 w  -  - 0 0",
+            "sol": [
+                "g5f7",
+                "b7e7",
+                "d3a6",
+                "d1d5",
+                "f7d6",
+                "e7e8",
+                "e8a8"
+            ]
+        },
+        {
+            "FEN": "2r1k2r/pp2np1p/7Q/q2pn1N1/6bP/1B6/P4PP1/2R2RK1 w k - 0 0",
+            "sol": [
+                "h6g7",
+                "c1c8",
+                "h4h5",
+                "g1h1",
+                "h5g6",
+                "h1g1"
+            ]
+        },
+        {
+            "FEN": "2R2rk1/5ppp/n4q2/r7/pn4QN/8/1P3PPP/R5K1 w  -  - 0 0",
+            "sol": [
+                "c8f8",
+                "g4c8",
+                "a1d1",
+                "d1d5",
+                "h4f5",
+                "c8f5"
+            ]
+        },
+        {
+            "FEN": "8/6q1/p7/8/1k3P2/6Q1/6K1/8 b  -  - 0 0",
+            "sol": [
+                "g7g3",
+                "a6a5",
+                "b4c5",
+                "a5a4",
+                "c5d6",
+                "d6e7",
+                "e7f8",
+                "a4a3",
+                "a3a2"
+            ]
+        },
+        {
+            "FEN": "r1b1kbB1/pp2q2Q/3p1pp1/8/1n2N3/8/PPPP1PPP/R1B1K2R b KQq - 0 0",
+            "sol": [
+                "e7e4",
+                "b4c2",
+                "e8d8",
+                "d8c7",
+                "c7b8",
+                "e4e8"
+            ]
+        },
+        {
+            "FEN": "3rr3/N1p2p1p/8/3p2kq/7N/6Pb/PQP2P1P/4R2K w  -  - 0 0",
+            "sol": [
+                "b2g7",
+                "e1e5",
+                "g7e5",
+                "h4g6"
+            ]
+        },
+        {
+            "FEN": "3rkbR1/1p5Q/p1p1qr2/8/3N1P2/4B3/PP5P/R3K3 b Q - 0 0",
+            "sol": [
+                "e6e3",
+                "f6f4",
+                "f4f7",
+                "e8f8",
+                "f8e7",
+                "e7d8"
+            ]
+        },
+        {
+            "FEN": "3r2k1/1p2bppp/5q2/2P5/2Q1P1rP/3R4/PP3P1P/R1B2K2 b  -  - 0 0",
+            "sol": [
+                "d8d3",
+                "e7c5",
+                "c5e3",
+                "f6a6",
+                "g4g1",
+                "a6e2"
+            ]
+        },
+        {
+            "FEN": "1k1r4/pq3pR1/1p4p1/3rP1P1/3p1P2/4PQ2/PP6/1K1R4 b  -  - 0 0",
+            "sol": [
+                "d4e3",
+                "b7d7",
+                "d7f5",
+                "d5d1",
+                "d1c1",
+                "d8g8"
+            ]
+        },
+        {
+            "FEN": "3r1rn1/2qp1pkp/p3p1nR/1pp1P1Q1/8/P2P4/BPP1bPP1/2KR4 w  -  - 0 0",
+            "sol": [
+                "d1h1",
+                "h6h7",
+                "h7f7",
+                "h1h7",
+                "g5f5",
+                "f5f6"
+            ]
+        },
+        {
+            "FEN": "7r/4k3/pp6/2p1K3/3p2R1/BP1P4/P1PQ4/7q b  -  - 0 0",
+            "sol": [
+                "h8h5",
+                "h1f3",
+                "b6c5",
+                "f3e2",
+                "e2g2",
+                "g2e4",
+                "h5g5"
+            ]
+        },
+        {
+            "FEN": "8/Q5kp/5pp1/3p1p2/1q1N4/4P1P1/5PKP/2r5 b  -  - 0 0",
+            "sol": [
+                "g7h6",
+                "b4c4",
+                "c4d3",
+                "d3e4",
+                "c1b1",
+                "e4f5"
+            ]
+        },
+        {
+            "FEN": "k1br4/p2Bn2n/5q1p/1RQ5/2P5/N5P1/P4P1P/4K2R b K - 0 0",
+            "sol": [
+                "f6c3",
+                "c8d7",
+                "d7g4",
+                "d8d2",
+                "c3f3",
+                "f3h1"
+            ]
+        },
+        {
+            "FEN": "4r1k1/ppp3pp/5p2/2P5/1PR2P2/B5P1/P1QP3K/RN2r3 b  -  - 0 0",
+            "sol": [
+                "e8e2",
+                "e1h1",
+                "h7h5",
+                "h1h2",
+                "h2f2",
+                "f2g2",
+                "g2h2"
+            ]
+        },
+        {
+            "FEN": "6rr/1b6/p6k/1p5P/4pKB1/4P3/2P5/R6R b  -  - 0 0",
+            "sol": [
+                "g8g5",
+                "h8f8",
+                "b7c8",
+                "h6h7",
+                "f8g8",
+                "g8g5",
+                "g5g4"
+            ]
+        },
+        {
+            "FEN": "3r2k1/1p3ppp/3q1n2/8/1P2pP2/2PPQ2P/r3B1P1/3R1RK1 b  -  - 0 0",
+            "sol": [
+                "f6d5",
+                "a2e2",
+                "d6g6",
+                "e2e4",
+                "g6e6",
+                "e4e1",
+                "e6e1"
+            ]
+        },
+        {
+            "FEN": "8/7K/6pN/4k1P1/7P/3b4/8/8 w  -  - 0 0",
+            "sol": [
+                "h6f7",
+                "h7h6",
+                "f7h8",
+                "h6h7",
+                "h8g6"
+            ]
+        },
+        {
+            "FEN": "3qk2r/p2bbp1p/4p1p1/rB1pP3/5B2/6P1/1P2QP1P/R4RK1 w k - 0 0",
+            "sol": [
+                "b5d7",
+                "f4d2",
+                "e2b5",
+                "f1a1",
+                "b5b6",
+                "a1a8",
+                "a8h8"
+            ]
+        },
+        {
+            "FEN": "8/8/2PQbnkb/4p1np/4Pq2/6PP/4BP2/2R1R1K1 b  -  - 0 0",
+            "sol": []
         }
     ]
 }
