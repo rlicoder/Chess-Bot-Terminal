@@ -123,9 +123,6 @@ while True:
         nextb = bot.find_element(By.XPATH, '/html/body/div[3]/div/div/div[5]/div[1]/div/button[3]')
         html = bot.page_source
         if (html.find('Incorrect') != -1):
-            f = open('debug.txt', 'a')
-            f.write(bot.current_url)
-            f.close()
             nextb = bot.find_element(By.XPATH, '/html/body/div[3]/div/div/div[5]/div[1]/div/button[4]')
             bad += 1
         else:

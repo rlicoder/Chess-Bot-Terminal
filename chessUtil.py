@@ -59,7 +59,6 @@ def getFen(html):
             whiteturn = True
         else:
             whiteturn = False
-        html = bot.page_source
 
     pieces = []
     pattern = re.compile('[bw]\D square-\d\d|square-\d\d [bw]\D')
