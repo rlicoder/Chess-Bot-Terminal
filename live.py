@@ -4,7 +4,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 from selenium import webdriver
 from time import sleep
 from stockfish import Stockfish
-import util
+import chessUtil
 import random
 from selenium.common.exceptions import NoSuchElementException
 from selenium.common.exceptions import StaleElementReferenceException
@@ -51,9 +51,9 @@ bot.set_page_load_timeout(20)
 
 bot.get('https://www.chess.com/home')
 email = bot.find_element(By.XPATH, '//*[@id="username"]')
-email.send_keys('MiniMaxer')
+email.send_keys('LookingForFriends3')
 passw = bot.find_element(By.XPATH, '//*[@id="password"]')
-passw.send_keys('HPziac9W4JRiwkE')
+passw.send_keys('Abc12345')
 signin = bot.find_element(By.XPATH, '//*[@id="login"]')
 signin.click()
 
@@ -81,7 +81,7 @@ while (cont != 'q'):
         if html.find(cont) != -1:
             break
         html = bot.page_source
-        turn_number = util.getTurnNumber(html);
+        turn_number = chessUtil.getTurnNumber(html);
         if delayon:
             if turn_number <= 10:
                 offset = random.randint(0,beg_delay)
@@ -99,8 +99,8 @@ while (cont != 'q'):
                 stockfish.set_depth(18)
             sleep(offset/1000)
         html = bot.page_source
-        FEN = util.getFen(html)
-        dir_x, dir_y = util.getDir(html)
+        FEN = chessUtil.getFen(html)
+        dir_x, dir_y = chessutil.getDir(html)
 
         stockfish.set_fen_position(FEN)
         move = stockfish.get_best_move_time(timecons)
@@ -108,7 +108,7 @@ while (cont != 'q'):
         print(move)
         print(stockfish.get_evaluation())
 
-        piece, difx, dify = util.makeMove(move, bot)
+        piece, difx, dify = chessUtil.makeMove(move, bot)
         webdriver.ActionChains(bot).drag_and_drop_by_offset(piece, dify * dir_y, difx * dir_x).perform()
         html = bot.page_source
     sleep(random.randint(0,500)/1000)

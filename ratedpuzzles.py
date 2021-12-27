@@ -118,7 +118,7 @@ while True:
             piece, difx, dify = chessUtil.makeMove(move, bot)
             webdriver.ActionChains(bot).drag_and_drop_by_offset(piece, dify * dir_y, difx * dir_x).perform()
             sleep(1.25)
-    sleep(1)
+    sleep(1.5)
     try:
         nextb = bot.find_element(By.XPATH, '/html/body/div[3]/div/div/div[5]/div[1]/div/button[3]')
         html = bot.page_source

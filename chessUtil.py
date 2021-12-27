@@ -167,6 +167,7 @@ def makeMove(move, bot):
     if len(piecel) == 2:
         piece = piecel[1]
     else:
+        print(search)
         piece = piecel[0]
     endx = int(move[3])
     endy = int(ord(move[2]) - 96)
@@ -181,7 +182,12 @@ def findInBetween(start, end, turn):
     l = start.split(' ')
     l[1] = turn
     start = ' '.join(l)
-    startgame = Game(start)
+    try:
+        startgame = Game(start)
+    except Exception as e:
+        print(e)
+        print(start)
+        print(end)
     for i in startgame.get_moves():
         dummy = Game(start)
         dummy.apply_move(i)
